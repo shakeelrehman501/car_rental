@@ -1,6 +1,6 @@
 "use client";
 
-import { navItems } from "@/lib/data/servicePageData";
+import { navItems } from "@/lib/data/constant";
 import Link from "next/link";
 
 type Variant = "desktop" | "sidebar" 
