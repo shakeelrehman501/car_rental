@@ -167,42 +167,6 @@ function About() {
             </div>
           </div>
         </div>
-
-        {/* Contact Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 pb-12 md:pb-16">
-          {/* Location Card */}
-          <div className="flex flex-col items-center text-center p-6 bg-gray-50 rounded-lg">
-            <div className="w-16 h-16 md:w-20 md:h-20 rounded-lg bg-red-500 flex items-center justify-center mb-4">
-              <MapPin className="w-8 h-8 md:w-10 md:h-10 text-white" />
-            </div>
-            <h4 className="font-bold text-gray-900 text-lg md:text-xl mb-2">Location</h4>
-            <p className="text-sm md:text-base text-gray-600">
-              Find us at our prime location, easily accessible from major highways.
-            </p>
-          </div>
-
-          {/* Email Card */}
-          <div className="flex flex-col items-center text-center p-6 bg-gray-50 rounded-lg">
-            <div className="w-16 h-16 md:w-20 md:h-20 rounded-lg bg-red-500 flex items-center justify-center mb-4">
-              <Mail className="w-8 h-8 md:w-10 md:h-10 text-white" />
-            </div>
-            <h4 className="font-bold text-gray-900 text-lg md:text-xl mb-2">Email</h4>
-            <p className="text-sm md:text-base text-gray-600">
-              Reach out to us anytime via email for inquiries and support.
-            </p>
-          </div>
-
-          {/* Call Card */}
-          <div className="flex flex-col items-center text-center p-6 bg-gray-50 rounded-lg">
-            <div className="w-16 h-16 md:w-20 md:h-20 rounded-lg bg-red-500 flex items-center justify-center mb-4">
-              <Phone className="w-8 h-8 md:w-10 md:h-10 text-white" />
-            </div>
-            <h4 className="font-bold text-gray-900 text-lg md:text-xl mb-2">Call</h4>
-            <p className="text-sm md:text-base text-gray-600">
-              Call us directly for immediate assistance and booking services.
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   );

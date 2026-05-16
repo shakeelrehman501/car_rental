@@ -9,17 +9,17 @@ import "react-toastify/dist/ReactToastify.css";
 
 function ContactInfoCard({ icon: Icon, title, data }: ContactCardType) {
   return (
-    <div className="bg-white dark:bg-[#0f172a] rounded-2xl p-6 border border-[#e2e8f0] dark:border-[#1e293b] shadow-sm transition-colors">
+    <div className="min-h-36.5 min-w-78 max-w-100    group hover:border-primary hover:scale-102 cursor-pointer  relative   bg-white flex flex-col items-center gap-2 justify-center rounded-2xl p-6 border border-[#e2e8f0] dark:border-[#1e293b] shadow-sm transition-all duration-300 ease-in-out ">
       {/* Icon */}
-      <div className="bg-[rgba(37,99,235,0.1)] dark:bg-[rgba(59,130,246,0.15)] w-12 h-12 rounded-[12px] flex items-center justify-center mb-4 transition-colors">
+      <div className="absolute -top-6  bg-primary text-white w-12 h-12 rounded-[12px] flex items-center justify-center mb-4 transition-colors">
         <Icon size={24} />
       </div>
       {/* Heading */}
-      <h3 className=" font-bold text-[18px] text-[#0f172a] dark:text-[#f8fafc] tracking-[-0.45px] leading-7 mb-2 transition-colors">
+      <h3 className=" font-bold text-[20px] text-[#0f172a] group-hover:text-primary tracking-[-0.45px] leading-7 mb-2 transition-colors">
         {title}
       </h3>
       {/* Info */}
-      <p className=" text-[14px] text-[#64748b] dark:text-[#94a3b8] leading-5 transition-colors">
+      <p className=" text-[17px] text-[#64748b] group-hover:text-primary leading-5 transition-colors">
         {data}
       </p>
     </div>
@@ -90,9 +90,9 @@ function Contact() {
         />
 
         {/* Contact Cards & Form */}
-        <div className="grid lg:grid-cols-[336px_1fr] gap-6 max-w-276 mx-auto">
+        <div className="grid lg:grid-cols-[336px_1fr] gap-6 max-w-276 mx-auto  ">
           {/* Information Card */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-wrap items-center  justify-center lg:flex-col gap-10 lg:justify-between">
             {contactCardData.map((item, index) => (
               <div key={index}>
                 <ContactInfoCard {...item} />
@@ -104,7 +104,7 @@ function Contact() {
           <div>
             <div
               
-              className="bg-white dark:bg-[#0f172a] rounded-3xl p-10 border border-[#e2e8f0] dark:border-[#1e293b] shadow-xl transition-colors">
+              className="bg-white dark:bg-[#0f172a] rounded-3xl p-10 border border-[#e2e8f0] dark:border-[#1e293b] shodow shadow-sm transition-colors">
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name Input */}
                 <div>

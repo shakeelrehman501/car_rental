@@ -15,7 +15,7 @@ function Heading({ heading, gradientHeading, paragraph, className }: Props) {
     <div className="text-center mb-16">
       <div >
       <div className="flex w-fit mx-auto gap-2.5 font-bold">
-        <h1 className="text-4xl  leading-12 lg:text-[48px] text-secondary-foreground  ">
+        <h1 className="text-4xl  leading-12 lg:text-[48px] text-secondary  ">
           {heading}
         </h1>
               
@@ -34,7 +34,7 @@ function Heading({ heading, gradientHeading, paragraph, className }: Props) {
       </div>
 
       <div>
-      <div className="mt-6 mx-auto w-24 h-2 rounded-full bg-gradient-to-r from-secondary-foreground to-primary" />
+      <div className="mt-6 mx-auto w-24 h-1 rounded-full bg-gradient-to-r from-primary to-secondary" />
       </div>
 
     </div>

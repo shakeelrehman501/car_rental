@@ -23,7 +23,7 @@ const NavLinks = ({
     return (
       <ul className={`hidden lg:flex gap-10 text-sm  md:text-lg 
         ${
-        isScrolled ? "text-secondary-foreground" : "text-primary-foreground"}`}>
+        isScrolled ? "text-secondary" : "text-primary-foreground"}`}>
         {navItems.map((item) => {
           return (
             <li key={item.id} className="relative group ">
@@ -32,8 +32,8 @@ const NavLinks = ({
                   <button
                   onClick={() => onClick(item.id)}
                   className={`cursor-pointer lg:py-5.5  border-b-transparent border-b-2
-                    hover:border-b-secondary dark:hover:border-b-secondary-foreground 
-                     ${isScrolled ? "hover:border-b-secondary-foreground " : " "}
+                      
+                     ${isScrolled ? "hover:border-b-primary hover:text-primary " : "hover:border-b-primary-foreground "}
                      `}
                     >
                   {item.label}
