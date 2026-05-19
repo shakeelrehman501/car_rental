@@ -15,7 +15,7 @@ export default function Home() {
             width={5000}
             height={5000}
             priority={true}
-            className="object-contain  w-full h-full hidden lg:block"
+            className="object-cover z-0  w-full  h-220  hidden lg:block"
           />
       <Image
             src="/others/hero_bg_mob.jpg"
@@ -23,9 +23,17 @@ export default function Home() {
             width={5000}
             height={5000}
             priority={true}
-            className="object-contain w-full h-full block lg:hidden"
+            className=" object-contain z-0 w-full h-full hidden  md:block lg:hidden"
           />
-        <div className="max-w-350 px-3 2xl:px-0 mx-auto ">
+      <Image
+            src="/others/hero_bg_mob.png"
+            alt="3D_Model"
+            width={5000}
+            height={5000}
+            priority={true}
+            className="object-cover   z-0 min-w-80 w-full   min-h-206 h-full   block md:hidden"
+          />
+        <div className="object-contain max-w-350 absolute top-30 lg:top-50 left-1/2 -translate-x-1/2  w-full  px-1 2xl:px-0  z-10 ">
           <HeroSection />
         </div>
       </div>

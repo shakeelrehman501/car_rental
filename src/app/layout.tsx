@@ -2,10 +2,7 @@ import Navbar from "@/components/navbar/Navbar";
 import { bricolage } from "@/lib/fonts";
 import "./globals.css";
 import Footer from "@/components/service/Footer";
-import { Geist } from "next/font/google";
-import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 
 export default function RootLayout({
@@ -15,8 +12,8 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en" className={cn("font-sans", geist.variable)}>
-      <body className={`min-h-screen flex flex-col bg-primary dark:bg-secondary ${bricolage.variable}`}>
+      lang="en" suppressHydrationWarning>
+      <body className={`min-h-screen flex flex-col  ${bricolage.variable}`}>
         <Navbar/>
         <main>
           {children}
