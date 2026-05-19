@@ -40,12 +40,12 @@ const Navbar = () => {
               <Link href="/">
                 <Image
                   onClick={handleClick}
-                  src="/logo.png"
+                  src={`${isScrolled ? "/others/black_logo.png" : "/others/white_logo.png"}`}
                   alt="3D Model"
                   width={200}
                   height={200}
                   priority={true}
-                  className="w-24 sm:w-28 2xl:w-32 cursor-pointer text-secondary bg-primary-foreground p-1"
+                  className="w-24 sm:w-28 2xl:w-32 cursor-pointer text-secondary  p-1"
                 />
               </Link>
               {/* Desktop Navbar */}

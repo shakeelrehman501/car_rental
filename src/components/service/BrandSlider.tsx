@@ -1,94 +1,107 @@
-
+"use client"
 
 import Image from "next/image";
+import { useState, useRef } from 'react';
+import { motion, useMotionValue, useAnimationFrame, animate } from 'motion/react';
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { brands, BrandType } from "@/lib/data/constant";
+import Heading from "../myComponents/Heading";
 
-const brands = [
-  {
-    name: "Acura",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7b/Acura-logo.png",
-  },
-  {
-    name: "Ford",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/3/3e/Ford_logo_flat.svg",
-  },
-  {
-    name: "Bentley",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/8/8b/Bentley_logo_2.svg",
-  },
-  {
-    name: "Chevrolet",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/2/29/Chevrolet-logo.png",
-  },
-  {
-    name: "Ferrari",
-    image:
-      "https://upload.wikimedia.org/wikipedia/en/d/d1/Ferrari-Logo.svg",
-  },
-  {
-    name: "Mercedes",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg",
-  },
-];
-
- function BrandSlider() {
+function BrandCard({name, image}:BrandType) {
   return (
-    <section className="bg-[#f5f5f5] py-16 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-4">
-        <p className="text-center text-sm font-semibold tracking-wide text-red-500 uppercase">
-          Find Your Car By Brand
-        </p>
-
-        <h2 className="mt-2 text-center text-4xl font-bold text-gray-800">
-          Browse By Brands
-        </h2>
-
-        <div className="relative mt-10">
-          {/* arrows */}
-          <button className="absolute left-0 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-white p-2 shadow md:flex">
-            <ChevronLeft className="size-6 text-gray-400" />
-          </button>
-
-          <button className="absolute right-0 top-1/2 z-10 hidden -translate-y-1/2 rounded-full bg-white p-2 shadow md:flex">
-            <ChevronRight className="size-6 text-gray-400" />
-          </button>
-
-          {/* fade effect */}
-          <div className="pointer-events-none absolute left-0 top-0 z-[5] h-full w-24 bg-gradient-to-r from-[#f5f5f5] to-transparent" />
-          <div className="pointer-events-none absolute right-0 top-0 z-[5] h-full w-24 bg-gradient-to-l from-[#f5f5f5] to-transparent" />
-
-          {/* slider */}
-          <div className="group flex overflow-hidden">
-            <div className="animate-marquee flex min-w-max gap-6">
-              {[...brands, ...brands].map((brand, index) => (
-                <div
-                  key={index}
-                  className="flex h-[170px] w-[170px] shrink-0 flex-col items-center justify-center border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                >
-                  <div className="relative h-16 w-24">
-                    <Image
-                      src={brand.image}
-                      alt={brand.name}
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-
-                  <h3 className="mt-5 text-lg font-semibold text-[#1d2340]">
-                    {brand.name}
-                  </h3>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+    <div
+      className="flex h-42 w-42 shrink-0 flex-col items-center justify-center border rounded-sm border-gray-200 bg-white shadow-sm transition-all duration-300 cursor-pointer "
+    >
+      <div className="relative h-16 w-24">
+        <Image
+          src={image}
+          alt={name}
+          width={2000}
+          height={2000}
+          className="object-contain"
+        />
       </div>
-    </section>
+
+      <h3 className="mt-5 text-lg font-semibold text-[#1d2340]">
+        {name}
+      </h3>
+    </div>
   );
 }
+
+function BrandSlider() {
+  const [isPaused, setIsPaused] = useState(false);
+  const x = useMotionValue(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const cardWidth = 200; // Width of each card + gap
+  const totalWidth = brands.length * cardWidth;
+
+  useAnimationFrame((time, delta) => {
+    if (!isPaused) {
+      const currentX = x.get();
+      const newX = currentX - (delta * 0.07); // Speed of animation
+
+      if (Math.abs(newX) >= totalWidth) {
+        x.set(0);
+      } else {
+        x.set(newX);
+      }
+    }
+  });
+  const handleNavigate = (direction: 'left' | 'right') => {
+    const currentX = x.get();
+    const shift = direction === 'left' ? cardWidth : -cardWidth;
+    const newX = currentX + shift;
+
+    animate(x, newX, {
+      type: 'spring',
+      stiffness: 300,
+      damping: 30,
+    });
+  };
+   
+  return (
+    <div className=" flex flex-col items-center justify-center bg-white pb-26 pt-25 ">
+      <Heading
+          heading="Explore"
+          gradientHeading="Brands"
+        />
+
+      <div className="relative w-full max-w-6xl bg-[#F2F5FB] py-3 ">
+        <button
+          onClick={() => handleNavigate('left')}
+          className="absolute left-1 xl:-left-6.5 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-2.5 sm:p-3 shadow-lg border border-gray-100 hover:bg-gray-100 transition-colors"
+          aria-label="Previous"
+        >
+          <ChevronLeft className="w-5.5 h-5.5 sm:w-6 sm:h-6 text-gray-700" />
+        </button>
+
+        <button
+          onClick={() => handleNavigate('right')}
+          className="absolute right-1 xl:-right-6.5 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-2.5 sm:p-3 shadow-lg hover:bg-gray-100 transition-colors"
+          aria-label="Next"
+        >
+          <ChevronRight className="w-5.5 h-5.5 sm:w-6 sm:h-6 text-gray-700" />
+        </button>
+
+        <div className="overflow-hidden px-16">
+          <motion.div
+            ref={containerRef}
+            className="flex gap-6"
+            style={{ x }}
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            {[...brands, ...brands, ...brands].map((brand, index) => (
+              <BrandCard key={`${brand.name}-${index}`} {...brand}/>
+               
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
 export default BrandSlider;

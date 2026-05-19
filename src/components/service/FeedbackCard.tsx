@@ -86,8 +86,8 @@ function FeedbackCard({ CarouselContent, CarouselItem, active }: Props) {
       })}
        
     </CarouselContent>
-    <div >
-      <div className="w-full max-w-fit mx-auto mt-6 md:mt-12">
+    {/* Review Button */}
+      {/* <div className="w-full max-w-fit mx-auto mt-6 md:mt-12">
         <a 
   href="https://www.trustpilot.com/review/boxeltechnology.com?utm_medium=trustbox&amp;utm_source=TrustBoxReviewCollector" 
   target="_blank" 
@@ -100,8 +100,7 @@ function FeedbackCard({ CarouselContent, CarouselItem, active }: Props) {
   </svg>
      <span>Trustpilot</span>
 </a>
-      </div>
-    </div>
+      </div> */}
     </>
   );
 }

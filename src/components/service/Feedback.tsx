@@ -1,19 +1,20 @@
 
 import React from 'react'
 import FeedbackCarousel from './FeedbackCarousel';
+import Heading from '@/components/myComponents/Heading';
 
 
 function Feedback() {
   
   return (
-    <div className=" w-full bg-secondary relative">
+    <div className=" w-full  relative pb-6">
   
   <div
-    className="absolute inset-0 z-0  dark:hidden"
+    className="absolute inset-0 z-0  "
     style={{
       backgroundImage: `
-        linear-gradient(to right, rgba(229,231,235,1) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(229,231,235,1) 1px, transparent 1px),
+        linear-gradient(to right, rgba(229,231,235,0.7) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(229,231,235,0.7) 1px, transparent 1px),
         radial-gradient(circle 500px at 100% 100%, rgba(139,92,246,0.05), transparent),
         radial-gradient(circle 500px at 100% 100%, rgba(59,130,246,0.05), transparent)
       `,
@@ -22,11 +23,15 @@ function Feedback() {
   />
   
 
-    <div className="py-15 space-y-10">
+    <div className="py-15">
         
       <div className="w-full mx-auto   flex justify-center items-center">
-        <div  className="text-4xl font-semibold text-secondary-foreground z-1">
-          FeedBack
+        <div className='z-10'>
+        <Heading
+          heading="What Our "
+          gradientHeading="Clients Say"
+          paragraph='Hear directly from our valued clients about their experiences, trust, and satisfaction with our services.'
+        />
         </div>
       </div>
       <div >

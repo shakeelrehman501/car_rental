@@ -43,18 +43,18 @@ function FeedbackCarousel() {
           <CarouselPrevious
             className="
         p-5 left-2 sm:-left-6
-        bg-secondary text-secondary-foreground 
-        hover:text-secondary-foreground
-        dark:bg-secondary dark:hover:bg-secondary  hover:scale-110 
+        bg-secondary-foreground  text-secondary 
+        hover:bg-gray-200
+        hover:scale-110 
         "
           />
 
           <CarouselNext
             className="
         p-5 right-2 sm:-right-6
-        bg-secondary text-secondary-foreground 
-        hover:text-secondary-foreground
-        dark:bg-secondary dark:hover:bg-secondary  hover:scale-110 
+        bg-secondary-foreground  text-secondary 
+        hover:bg-gray-200
+        hover:scale-110 
         "
           />
         </Carousel>

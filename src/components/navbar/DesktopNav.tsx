@@ -4,7 +4,7 @@ import React from "react";
 import MyButton from "@/components/myComponents/MyButton";
 import NavLinks from "./NavLinks";
 import Link from "next/link";
-import { Contact, Phone } from "lucide-react";
+import { PhoneIcon, ContactIcon } from "@/icons";
 
 interface Props {
   isScrolled: boolean;
@@ -28,7 +28,7 @@ const DesktopNav = ({
         <a href="https://wa.me/923216800902">
         <div  
           className="group flex justify-center items-center gap-1 cursor-pointer">
-          <Phone className="w-5" />
+          <PhoneIcon className="w-5" />
           <span className={`
               ${
             isScrolled ? "group-hover:text-primary" : "group-hover:text-blue-200 dark:group-hover:text-primary "
@@ -44,7 +44,7 @@ const DesktopNav = ({
         />
         <Link href="/contact">
         <MyButton
-          leftIcon={<Contact className="w-5 h-5" />}
+          leftIcon={<ContactIcon className="w-5 h-5" />}
           variant={isScrolled ? "fill" : "solid"}
         >
           Contact us

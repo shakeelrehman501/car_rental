@@ -12,15 +12,15 @@ type Props = {
 
 function Heading({ heading, gradientHeading, paragraph, className }: Props) {
   return (
-    <div className="text-center mb-16">
+    <div className="text-center mb-12">
       <div >
-      <div className="flex w-fit mx-auto gap-2.5 font-bold">
-        <h1 className="text-4xl  leading-12 lg:text-[48px] text-secondary  ">
+      <div className="flex  w-fit mx-auto gap-2.5 font-bold flex-wrap justify-center items-center ">
+        <h1 className="text-4xl  leading-6 lg:text-[48px] text-secondary text-nowrap   ">
           {heading}
         </h1>
               
         <h1
-          className={`text-4xl lg:text-[48px] leading-12 
+          className={`text-4xl lg:text-[48px] leading-12 text-nowrap
             text-primary ${className}`}
         >
           {gradientHeading}

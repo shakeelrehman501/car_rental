@@ -1,5 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
 import { whyChooseUsFeatures } from "../../lib/data/constant";
+import Heading from "@/components/myComponents/Heading";
 
 
 export default function WhyChooseUs() {
@@ -8,20 +9,23 @@ export default function WhyChooseUs() {
     <section id="about" className="py-20 bg-white">
       <div
         
-        className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-1000 `}
+        className={` sm:px-6 lg:px-8 transition-all duration-1000 `}
       >
-        <h2 className="text-center text-3xl md:text-4xl mb-16 text-[#0B0B0B]">
-          Why Choose us
-        </h2>
+        <Heading
+          heading="Why"
+          gradientHeading="Choose Us"
+          paragraph="Discover the best car rental experience with unbeatable deals, reliable service, and top-quality vehicles designed to make every journey smooth and comfortable."
+        />
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="w-full max-w-350 min-w-66 mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* Left - Car Image */}
           <div className="relative">
+            
             <div className="relative z-10">
               <img
                 src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80"
                 alt="Car"
-                className="w-full h-auto object-contain rounded-lg"
+                className="w-full h-100 object-cover rounded-lg"
               />
             </div>
             {/* Decorative Background */}
@@ -30,25 +34,25 @@ export default function WhyChooseUs() {
 
           {/* Right - Features */}
           <div>
-            <p className="text-lg text-[#6B7280] mb-8">
-              We offer the best experience with our rental deals. Discover the
-              perfect car for your journey with unbeatable service and pricing.
-            </p>
-
-            <div className="space-y-6">
+            
+            <div className="space-y-2">
               {whyChooseUsFeatures.map((feature, index) => (
                 <div
                   key={index}
-                  className="flex gap-4 p-4 rounded-lg hover:bg-[#F5F5F5] transition-colors duration-300"
+                  className="group"
                 >
-                  <div className="flex-shrink-0">
-                    <CheckCircle2 className="w-6 h-6 text-[#FF2E2E]" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg mb-1 text-[#0B0B0B]">
-                      {feature.title}
-                    </h3>
-                    <p className="text-[#6B7280]">{feature.description}</p>
+                  <div className="flex items-start gap-5 hover:bg-gray-100 px-3 py-4 rounded-sm">
+                    <div className="flex-shrink-0 w-10 h-10 bg-red-50 rounded-full flex items-center justify-center group-hover:bg-red-500 transition-colors duration-300">
+                      <feature.icon className="w-5 h-5 text-red-500 group-hover:text-white transition-colors duration-300" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-1">
+                        {feature.title}
+                      </h4>
+                      <p className="text-sm text-gray-600 leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))}
