@@ -32,14 +32,14 @@ function FeedbackCard({ CarouselContent, CarouselItem, active }: Props) {
                       text-xs w-full  p-4 flex 
                       sm:text-sm sm:p-5
                       lg:text-[16px] lg:p-6
-                    `}
+                    `} 
             >
               {isActive && (
                 <>
-                  <div className="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-secondary-foreground/50" />
-                  <div className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-secondary-foreground/50" />
-                  <div className="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-secondary-foreground/50" />
-                  <div className="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2 border-secondary-foreground/50" />
+                  <div className="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-secondary/40" />
+                  <div className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-secondary/40" />
+                  <div className="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-secondary/40" />
+                  <div className="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2 border-secondary/40" />
                 </>
               )}
 

@@ -2,7 +2,7 @@ import { IconType } from "react-icons";
 import { HiOutlineMail } from "react-icons/hi";
 import { FiPhoneCall } from "react-icons/fi";
 import { GrLocation } from "react-icons/gr";
-import { CheckCircle2, Shield, Headphones, DollarSign, Award, Clock } from 'lucide-react';
+import { CheckCircle2, Shield, Headphones, DollarSign, Award, Clock, Car } from 'lucide-react';
 
 export const navItems = [
   { id: "/", label: "Services" },
@@ -133,6 +133,11 @@ export const whyChooseUsFeatures = [
     description: 'Premium customer service that exceeds your expectations.',
   },
   {
+    icon: Car,
+    title: 'Professional Drivers',
+    description: 'Travel with highly experienced and professional drivers for a safe and comfortable journey.',
+  },
+  {
     icon: DollarSign,
     title: 'Free Cancellation',
     description: 'Cancel anytime without any hidden fees or charges.',
@@ -147,45 +152,45 @@ export const whyChooseUsFeatures = [
 export const feedbackCardItems = [
   {
     id: 1,
-    firstCharacter: "M",
-    name: "Mark Kole",
+    firstCharacter: "J",
+    name: "James Wilson",
     review:
-      "I have used this company for several of my project some very, very small and others, medium size and one larger project. The team was super responsive and prove to be extremely dependable...",
+      "Excellent service from start to finish. The car was spotless, well-maintained, and exactly as described. The booking process was smooth, and the staff was extremely professional.",
   },
   {
     id: 2,
     firstCharacter: "S",
-    name: "Saeed Younas",
+    name: "Sarah Johnson",
     review:
-      "I recently used Jamil to make a few designs for my Hajj Umra and tour company, he listened and understood the project with minor adjustments he exceeded my expectation. I would highly recommend and I for sure will be using him again for other projects in the pipeline.",
+      "Outstanding experience. Their professional drivers and premium vehicles made our journey comfortable and stress-free. I’ll definitely use their service again.",
   },
   {
     id: 3,
-    firstCharacter: "J",
-    name: "Jim Lewis",
+    firstCharacter: "Z",
+    name: "Zainab Malik",
     review:
-      "Jamel was diligent and responded quickly and professionally to all our design requests.",
+      "Booking was super smooth via WhatsApp, and the car was clean, comfortable, and exactly what I needed.",
   },
   {
     id: 4,
     firstCharacter: "M",
     name: "Mark Kole",
     review:
-      "I have used this company for several of my project some very, very small and others, medium size and one larger project. The team was super responsive and prove to be extremely dependable...",
+      "Best luxury car rental service in Lahore, hands down. Their rates are very competitive compared to market standards, and their 24/7 customer support team is incredibly responsive and helpful.",
   },
   {
     id: 5,
-    firstCharacter: "S",
-    name: "Saeed Younas",
+    firstCharacter: "E",
+    name: "Emily Davis",
     review:
-      "I recently used Jamil to make a few designs for my Hajj Umra and tour company, he listened and understood the project with minor adjustments he exceeded my expectation. I would highly recommend and I for sure will be using him again for other projects in the pipeline.",
+      "Highly recommended. Great prices and very reliable service.",
   },
   {
     id: 6,
     firstCharacter: "J",
     name: "Jim Lewis",
     review:
-      "Jamel was diligent and responded quickly and professionally to all our design requests.",
+      "Fantastic experience from booking to return. The car was in excellent condition, drove perfectly, and the entire process was quick and seamless.",
   },
 ];
 
@@ -199,16 +204,16 @@ export const contactCardData:ContactCardType[] = [
   {
     icon:HiOutlineMail, 
     title:"Email",
-    data:"shakeelrehman501@gmail.com"
+    data:"soukatali5@gmail.com"
   },
   {
     icon:FiPhoneCall, 
     title:"Phone",
-    data:"0300-0787595"
+    data:"0335-4611570"
   },
   {
     icon:GrLocation, 
     title:"Location",
-    data:"Barkat Market, Lahore"
+    data:"153-H, Commercial Zone, Phase 1, DHA Lahore Cantt, Lahore, Pakistan"
   },
 ]

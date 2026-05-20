@@ -5,6 +5,7 @@ import { ContactCardType, contactCardData } from "@/lib/data/constant";
 import { ToastContainer, toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import "react-toastify/dist/ReactToastify.css";
+import { CarRentalMap } from "./component/Map";
 
 
 function ContactInfoCard({ icon: Icon, title, data }: ContactCardType) {
@@ -160,6 +161,7 @@ function Contact() {
           </div>
         </div>
       </div>
+      <CarRentalMap/>
     </section>
   );
 }

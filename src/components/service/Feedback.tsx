@@ -9,8 +9,7 @@ function Feedback() {
   return (
     <div className=" w-full  relative pb-6">
   
-  <div
-    className="absolute inset-0 z-0  "
+  <div className="absolute inset-0 z-0"
     style={{
       backgroundImage: `
         linear-gradient(to right, rgba(229,231,235,0.7) 1px, transparent 1px),

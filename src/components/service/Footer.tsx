@@ -33,12 +33,6 @@ export default function Footer() {
                 href="#"
                 className="w-10 h-10 bg-white/10 hover:bg-[#FF2E2E] rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
               >
-                <FaTwitter size={18}/>
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-white/10 hover:bg-[#FF2E2E] rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-              >
                 <LuInstagram size={18} />
               </a>
               <a
@@ -55,7 +49,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {["About Us", "Services", "Cars", "Contact", "FAQ"].map((link) => (
+              {["Services", "About Us", "Cars", "Contact"].map((link) => (
                 <li key={link}>
                   <a
                     href="#"
@@ -97,15 +91,15 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-gray-400">
                 <MapPin size={20} className="flex-shrink-0 text-[#FF2E2E] mt-1" />
-                <span>123 Main Street, New York, NY 10001</span>
+                <span>153-H, Commercial Zone, Phase 1, DHA Lahore Cantt, Lahore, Pakistan</span>
               </li>
               <li className="flex items-center gap-3 text-gray-400">
                 <Phone size={20} className="flex-shrink-0 text-[#FF2E2E]" />
-                <span>+1 (555) 123-4567</span>
+                <span>+92 335 4611570</span>
               </li>
               <li className="flex items-center gap-3 text-gray-400">
                 <Mail size={20} className="flex-shrink-0 text-[#FF2E2E]" />
-                <span>info@carrental.com</span>
+                <span>soukatali5@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -129,12 +123,6 @@ export default function Footer() {
                 className="text-gray-400 hover:text-[#FF2E2E] transition-colors"
               >
                 Terms of Service
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-[#FF2E2E] transition-colors"
-              >
-                Cookie Policy
               </a>
             </div>
           </div>
