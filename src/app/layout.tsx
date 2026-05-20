@@ -22,7 +22,7 @@ export default function RootLayout({
           rel="noopener noreferrer"
         >
           <button
-            className="animate-bounce animate-whatsappPulse fixed bottom-7 right-7 lg:bottom-8 lg:right-8 z-50 rounded-full  shadow-lg hover:shadow-xl transition-all duration-300 bg-[#25D366] hover:bg-[#20BA5A] p-2.5 cursor-pointer"
+            className="whatsapp-btn animate-whatsappPulse fixed bottom-7 right-7 lg:bottom-8 lg:right-8 z-50 rounded-full  shadow-lg hover:shadow-xl transition-all duration-300 bg-[#25D366] hover:bg-[#20BA5A] p-2.5 cursor-pointer"
             aria-label="Contact us on WhatsApp"
           >
             <BsWhatsapp className="w-10 h-10 text-white" />

@@ -10,17 +10,17 @@ import { CarRentalMap } from "./component/Map";
 
 function ContactInfoCard({ icon: Icon, title, data }: ContactCardType) {
   return (
-    <div className="min-h-36.5 min-w-78 max-w-100    group hover:border-primary hover:scale-102 cursor-pointer  relative   bg-white flex flex-col items-center gap-2 justify-center rounded-2xl p-6 border border-[#e2e8f0] dark:border-[#1e293b] shadow-sm transition-all duration-300 ease-in-out ">
+    <div className="min-h-36.5 min-w-75 max-w-100  pt-7  group hover:border-primary hover:scale-102 cursor-pointer  relative   bg-white flex flex-col items-center gap-2 justify-center rounded-2xl p-6 border border-[#e2e8f0] dark:border-[#1e293b] shadow-sm transition-all duration-300 ease-in-out ">
       {/* Icon */}
       <div className="absolute -top-6  bg-primary text-white w-12 h-12 rounded-[12px] flex items-center justify-center mb-4 transition-colors">
         <Icon size={24} />
       </div>
       {/* Heading */}
-      <h3 className=" font-bold text-[20px] text-[#0f172a] group-hover:text-primary tracking-[-0.45px] leading-7 mb-2 transition-colors">
+      <h3 className=" font-bold pt-1 text-[20px] text-gray-700 group-hover:text-primary tracking-[-0.45px] leading-7 mb-2 transition-colors">
         {title}
       </h3>
       {/* Info */}
-      <p className=" text-[17px] text-[#64748b] group-hover:text-primary leading-5 transition-colors">
+      <p className="text-center  text-[17px] text-[#64748b] group-hover:text-primary leading-6 transition-colors">
         {data}
       </p>
     </div>

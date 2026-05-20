@@ -1,5 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
-import { whyChooseUsFeatures } from "../../lib/data/constant";
+import { whyChooseUsFeatures, WhyChooseUsType } from "../../lib/data/constant";
 import Heading from "@/components/myComponents/Heading";
 
 
@@ -21,11 +21,11 @@ export default function WhyChooseUs() {
           {/* Left - Car Image */}
           <div className="relative">
             
-            <div className="relative z-10">
+            <div className="relative z-10 px-3 lg:px-1">
               <img
                 src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80"
                 alt="Car"
-                className="w-full h-120 object-cover rounded-lg"
+                className="w-full h-120 object-cover rounded-lg "
               />
             </div>
             
@@ -40,7 +40,7 @@ export default function WhyChooseUs() {
                   key={index}
                   className="group"
                 >
-                  <div className="flex items-start gap-6 hover:bg-gray-100 px-3 py-4 rounded-sm">
+                  <div className="flex items-start gap-4 lg:gap-6 hover:bg-gray-100 px-3 py-2 lg:py-4 rounded-sm">
                     <div className="flex-shrink-0 w-10 h-10 bg-red-50 rounded-full flex items-center justify-center group-hover:bg-red-500 transition-colors duration-300">
                       <feature.icon className="w-5.5 h-5.5 text-red-500 group-hover:text-white transition-colors duration-300" />
                     </div>

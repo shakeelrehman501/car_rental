@@ -120,8 +120,12 @@ export const projectsCardData:projectsCardType[] = [
   },   
 ];  
 
-
-export const whyChooseUsFeatures = [
+export interface WhyChooseUsType {
+  icon:IconType;
+  title:string;
+  description:string
+}
+export const whyChooseUsFeatures:WhyChooseUsType[] = [
   {
     icon: Shield,
     title: 'Best Price Guarantee',
@@ -214,6 +218,40 @@ export const contactCardData:ContactCardType[] = [
   {
     icon:GrLocation, 
     title:"Location",
-    data:"153-H, Commercial Zone, Phase 1, DHA Lahore Cantt, Lahore, Pakistan"
+    data:"153-H, Commercial Zone, Phase 1, DHA Lahore Cantt, Lahore"
   },
 ]
+
+
+export interface AboutCardType {
+  icon:IconType;
+  title:string;
+  description:string
+}
+export const aboutCardData:AboutCardType[] = [
+  {
+    icon: Shield,
+    title: 'Best Price Guarantee',
+    description: 'We offer the most competitive prices with unbeatable value for money.',
+  },
+  {
+    icon: Award,
+    title: '24/7 Customer Service',
+    description: 'Premium customer service that exceeds your expectations.',
+  },
+  {
+    icon: Car,
+    title: 'Professional Drivers',
+    description: 'Travel with highly experienced and professional drivers for a safe and comfortable journey.',
+  },
+  {
+    icon: DollarSign,
+    title: 'Free Cancellation',
+    description: 'Cancel anytime without any hidden fees or charges.',
+  },
+  {
+    icon: CheckCircle2,
+    title: 'Unlimited Miles',
+    description: 'Drive as much as you want with no mileage restrictions.',
+  }
+];

@@ -20,7 +20,7 @@ function Heading({ heading, gradientHeading, paragraph, className }: Props) {
         </h1>
               
         <h1
-          className={`text-4xl lg:text-[48px] leading-12 text-nowrap
+          className={`text-4xl  lg:text-[48px] leading-12 text-nowrap
             text-primary ${className}`}
         >
           {gradientHeading}
@@ -28,7 +28,7 @@ function Heading({ heading, gradientHeading, paragraph, className }: Props) {
       </div>
         </div>
       <div >
-      <p className="text-base font-normal  text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
+      <p className="text-base px-4 font-normal  text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
         {paragraph}
       </p>
       </div>

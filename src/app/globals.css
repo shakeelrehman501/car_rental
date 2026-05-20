@@ -20,6 +20,10 @@
     box-shadow: 0 0 0 12px rgba(37,211,102,0);
   }
 }
+.whatsapp-btn {
+  animation: whatsappPulse 2s infinite;
+  border-radius: 9999px;
+}
 
 
 @theme inline {
