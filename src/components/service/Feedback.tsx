@@ -2,6 +2,8 @@
 import React from 'react'
 import FeedbackCarousel from './FeedbackCarousel';
 import Heading from '@/components/myComponents/Heading';
+import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { AnimatedItem } from "@/components/ui/AnimatedItem";
 
 
 function Feedback() {
@@ -22,7 +24,7 @@ function Feedback() {
   />
   
 
-    <div className="py-15">
+    <AnimatedSection className="py-15">
         
       <div className="w-full mx-auto   flex justify-center items-center">
         <div className='z-10'>
@@ -33,10 +35,10 @@ function Feedback() {
         />
         </div>
       </div>
-      <div >
+      <AnimatedItem type='slideUp' index={0} >
       <FeedbackCarousel/>
-      </div>
-    </div>
+      </AnimatedItem>
+    </AnimatedSection>
      
     </div>
   );

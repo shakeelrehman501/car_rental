@@ -9,6 +9,8 @@ import { useScroll } from "@/hooks/useScroll";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { AnimatedItem } from "@/components/ui/AnimatedItem";
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState<string>("");
@@ -25,9 +27,9 @@ const Navbar = () => {
 
   return (
     <>
-      <div>
+      <AnimatedSection>
         <header className="w-full">
-          <div className="fixed top-0 left-0 w-full z-50 transition-all duration-400 ease-in-out">
+          <AnimatedItem type="fade" index={0} className="fixed top-0 left-0 w-full z-50 transition-all duration-400 ease-in-out">
             <div
               className={`max-w-350 w-full mx-auto flex justify-between items-center  
        ${
@@ -61,9 +63,9 @@ const Navbar = () => {
               {/* Mobile */}
               <MobileNav isScrolled={isScrolled} setIsOpen={setIsOpen} />
             </div>
-          </div>
+          </AnimatedItem>
         </header>
-      </div>
+      </AnimatedSection>
 
       {/* Sidebar */}
       <SideBar

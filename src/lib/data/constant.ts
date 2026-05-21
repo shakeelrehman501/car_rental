@@ -3,6 +3,9 @@ import { HiOutlineMail } from "react-icons/hi";
 import { FiPhoneCall } from "react-icons/fi";
 import { GrLocation } from "react-icons/gr";
 import { CheckCircle2, Shield, Headphones, DollarSign, Award, Clock, Car } from 'lucide-react';
+import { FaFacebookF } from "react-icons/fa6";
+import { LuInstagram } from "react-icons/lu";
+import { FaLinkedinIn } from "react-icons/fa"
 
 export const navItems = [
   { id: "/", label: "Services" },
@@ -68,55 +71,56 @@ export const brands:BrandType[] = [
   },
 ];
 
-export interface projectsCardType {
+export interface popularCarCardType {
   id: number;
   name: string;
-  price: number;
+  description:string;
+  price: string;
   image: string;
-  type: string;
 }
-export const projectsCardData:projectsCardType[] = [
+
+export const popularCarCard:popularCarCardType[] = [
   {
     id: 1,
-    name: "Jeeb Wagner",
-    price: 90,
-    image: "/cardImages/card_imag_1.jpg",
-    type: "SUV",
+    name: "Land Cruiser v8 LC300",
+    description:"Experience elite luxury, unmatched power and premium comfort for every journey",
+    price: "30,000",
+    image: "/cardImages/card_img_1.webp",
   },
   {
     id: 2,
-    name: "Honda Accord",
-    price: 85,
-    image: "/cardImages/card_imag_2.jpg",
-    type: "Sedan",
+    name: "Toyota Carolla",
+    description:"Reliable, fuel-efficient and comfortable sedan for daily city and family travel.",
+    price: "8,000",
+    image: "/cardImages/card_img_2.webp",
   },
   {
     id: 3,
-    name: "Ferrari 458",
-    price: 500,
-    image: "/cardImages/card_imag_3.jpg",
-    type: "Sport",
+    name: "Parado",
+    description:"Luxury SUV built for comfort, adventure and unforgettable driving experiences everywhere.",
+    price: "25,000",
+    image: "/cardImages/card_img_3.png",
   },
   {
     id: 4,
-    name: "Toyota Fortuner",
-    price: 95,
-    image: "/cardImages/card_imag_4.jpg",
-    type: "SUV",
+    name: "Honda Sivic",
+    description:"Stylish sedan delivering premium comfort, smooth performance and modern driving experience.",
+    price: "15,000",
+    image: "/cardImages/card_img_4.webp",
   },
   {
     id: 5,
-    name: "BMW X5",
-    price: 120,
-    image: "/cardImages/card_imag_5.jpg",
-    type: "SUV",
+    name: "Grandi X",
+    description:"Premium sedan combining elegant design, comfort and advanced driving technology features.",
+    price: "13,000",
+    image: "/cardImages/card_img_5.webp",
   },
   {
     id: 6,
-    name: "Mercedes C-Class",
-    price: 110,
-    image: "/cardImages/card_imag_6.jpg",
-    type: "Sedan",
+    name: "Yasir",
+    description:"Compact, comfortable and fuel-efficient car perfect for everyday city travel needs.",
+    price: "6,000",
+    image: "/cardImages/card_img_6.webp",
   },   
 ];  
 
@@ -254,4 +258,27 @@ export const aboutCardData:AboutCardType[] = [
     title: 'Unlimited Miles',
     description: 'Drive as much as you want with no mileage restrictions.',
   }
+];
+
+export interface Links {
+  name: string;
+  icon:IconType;
+  href:string
+}
+export const socialLinks:Links[] = [
+    {
+      name: "Facebook",
+      icon: FaFacebookF,
+      href: "#",
+    },
+    {
+      name: "Instagram",
+      icon: LuInstagram,
+      href: "#",
+    },
+    {
+      name: "LinkedIn",
+      icon: FaLinkedinIn ,
+      href: "#",
+    },
 ];

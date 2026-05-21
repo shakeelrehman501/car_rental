@@ -1,7 +1,7 @@
 import BrandSlider from "@/components/service/BrandSlider";
 import Feedback from "@/components/service/Feedback";
 import HeroSection from "@/components/service/Hero";
-import Projects from "@/components/service/Projects";
+import Projects from "@/components/service/PopularCars";
 import WhyChooseUs from "@/components/service/WhyChooseUs";
 import Image from "next/image";
 
@@ -10,34 +10,38 @@ export default function Home() {
       <main className="w-full  bg-white">
       <div className="relative">
       <Image
-            src="/others/hero_bg.jpg"
+            src="/others/hero_bg.webp"
             alt="3D Model"
-            width={5000}
-            height={5000}
+            width={4000}
+            height={4000}
             priority={true}
-            className="object-cover z-0  w-full  h-220  hidden lg:block"
+            className="object-cover z-0  w-full  hidden lg:block
+            lg:h-190
+            xl:h-225
+            "
           />
       <Image
-            src="/others/hero_bg_mob.jpg"
+            src="/others/hero_bg_labtop.webp"
             alt="3D Model"
-            width={5000}
-            height={5000}
+            width={4000}
+            height={4000}
             priority={true}
-            className=" object-contain z-0 w-full h-full hidden  md:block lg:hidden"
+            className=" object-cover z-0 w-full h-265 hidden  md:block lg:hidden"
           />
       <Image
-            src="/others/hero_bg_mob.png"
+            src="/others/hero_bg_mob.webp"
             alt="3D_Model"
             width={5000}
-            height={5000}
+            height={4000}
             priority={true}
-            className="object-cover z-0 min-w-80 w-full   min-h-206 max-h-220 h-full   block md:hidden"
+            className="object-cover z-0 min-w-80 w-full   min-h-180 max-h-220 h-full   block md:hidden"
           />
         <div className="object-contain max-w-350 absolute  left-1/2 -translate-x-1/2  w-full px-1 2xl:px-0  z-10
-        top-30
+        top-25
         sm:top-35
         md:top-40
         lg:top-50
+        xl:top-60
         ">
           <HeroSection />
         </div>

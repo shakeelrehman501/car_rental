@@ -12,7 +12,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`min-h-screen flex flex-col  ${bricolage.variable} ${poppins.variable}`}
+        className={`min-h-screen flex flex-col  ${bricolage.variable} ${poppins.variable} `}
       >
         <Navbar />
         <main>{children}</main>

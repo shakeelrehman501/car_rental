@@ -6,6 +6,8 @@ import { ToastContainer, toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import "react-toastify/dist/ReactToastify.css";
 import { CarRentalMap } from "./component/Map";
+import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { AnimatedItem } from "@/components/ui/AnimatedItem";
 
 
 function ContactInfoCard({ icon: Icon, title, data }: ContactCardType) {
@@ -70,7 +72,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="bg-gray-50 dark:bg-gray-900 py-16 lg:py-20 transition-colors">
+      className="bg-gray-50 dark:bg-gray-900  transition-colors">
       {/* Background Image */}
       <ToastContainer
         position="top-right"
@@ -81,6 +83,18 @@ function Contact() {
         draggable
       />
 
+      <div className="relative h-[200px] md:h-[300px] lg:h-[400px] w-full">
+        <img
+          src="/others/aboutux_img.webp"
+          alt="City Skyline"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider">
+            
+          </h1>
+        </div>
+      </div>
       {/* Content */}
       <div className="relative max-w-350 mx-auto px-6 py-24">
         {/* Header */}
@@ -93,17 +107,17 @@ function Contact() {
         {/* Contact Cards & Form */}
         <div className="grid lg:grid-cols-[336px_1fr] gap-6 max-w-276 mx-auto  ">
           {/* Information Card */}
-          <div className="flex flex-wrap items-center  justify-center lg:flex-col gap-10 lg:justify-between">
+          <AnimatedSection className="flex flex-wrap items-center  justify-center lg:flex-col gap-10 lg:justify-between">
             {contactCardData.map((item, index) => (
-              <div key={index}>
+              <AnimatedItem key={index} type="slideLeft" index={index}>
                 <ContactInfoCard {...item} />
-              </div>
+              </AnimatedItem>
             ))}
-          </div>
+          </AnimatedSection>
 
           {/* Right Side - Contact Form */}
-          <div>
-            <div
+          <AnimatedSection>
+            <AnimatedItem type="slideRight" index={0}
               
               className="bg-white dark:bg-[#0f172a] rounded-3xl p-10 border border-[#e2e8f0] dark:border-[#1e293b] shodow shadow-sm transition-colors">
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -157,8 +171,8 @@ function Contact() {
                   {loading ? "Sending..." : "Send Message"}
                 </button>
               </form>
-            </div>
-          </div>
+            </AnimatedItem>
+          </AnimatedSection>
         </div>
       </div>
       <CarRentalMap/>

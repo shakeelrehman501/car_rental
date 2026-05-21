@@ -1,16 +1,33 @@
 import { CheckCircle2 } from "lucide-react";
 import { whyChooseUsFeatures, WhyChooseUsType } from "../../lib/data/constant";
 import Heading from "@/components/myComponents/Heading";
+import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { AnimatedItem } from "@/components/ui/AnimatedItem";
 
+function WhyChooseUsCard({ icon: Icon, title, description }: WhyChooseUsType) {
+  return (
+    <div className="group">
+      <div className="flex items-start gap-4 lg:gap-6 hover:bg-gray-100 px-3 py-2 lg:py-4 rounded-sm">
+        <div className="flex-shrink-0 w-10 h-10 bg-red-50 rounded-full flex items-center justify-center group-hover:bg-red-500 transition-colors duration-300">
+          <Icon className="w-5.5 h-5.5 text-red-500 group-hover:text-white transition-colors duration-300" />
+        </div>
+        <div>
+          <h4 className="font-semibold text-gray-900 mb-1 text-[18px]">
+            {title}
+          </h4>
+          <p className="text-[16px] text-gray-600 leading-relaxed">
+            {description}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function WhyChooseUs() {
-  
   return (
     <section id="about" className="py-20 bg-white">
-      <div
-        
-        className={` sm:px-6 lg:px-8 transition-all duration-1000 `}
-      >
+      <div className={` sm:px-6 lg:px-8 transition-all duration-1000 `}>
         <Heading
           heading="Why"
           gradientHeading="Choose Us"
@@ -19,44 +36,30 @@ export default function WhyChooseUs() {
 
         <div className="w-full max-w-350 min-w-66 mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* Left - Car Image */}
-          <div className="relative">
-            
-            <div className="relative z-10 px-3 lg:px-1">
-              <img
-                src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80"
-                alt="Car"
-                className="w-full h-120 object-cover rounded-lg "
-              />
-            </div>
-            
-          </div>
+          <AnimatedSection>
+            <AnimatedItem type="slideLeft" index={0}>
+              <div className="relative">
+                <div className="relative z-10 px-3 lg:px-1">
+                  <img
+                    src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80"
+                    alt="Car"
+                    className="w-full h-120 object-cover rounded-lg "
+                  />
+                </div>
+              </div>
+            </AnimatedItem>
+          </AnimatedSection>
 
           {/* Right - Features */}
-          <div>
-            
+          <AnimatedSection>
             <div className="space-y-1 flex flex-col justify-between">
               {whyChooseUsFeatures.map((feature, index) => (
-                <div
-                  key={index}
-                  className="group"
-                >
-                  <div className="flex items-start gap-4 lg:gap-6 hover:bg-gray-100 px-3 py-2 lg:py-4 rounded-sm">
-                    <div className="flex-shrink-0 w-10 h-10 bg-red-50 rounded-full flex items-center justify-center group-hover:bg-red-500 transition-colors duration-300">
-                      <feature.icon className="w-5.5 h-5.5 text-red-500 group-hover:text-white transition-colors duration-300" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-1 text-[18px]">
-                        {feature.title}
-                      </h4>
-                      <p className="text-[16px] text-gray-600 leading-relaxed">
-                        {feature.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <AnimatedItem type="slideUp" index={index} key={index}>
+                  <WhyChooseUsCard {...feature} />
+                </AnimatedItem>
               ))}
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>
