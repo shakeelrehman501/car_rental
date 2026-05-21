@@ -10,14 +10,15 @@ export default function Home() {
       <main className="w-full  bg-white">
       <div className="relative">
       <Image
-            src="/others/hero_bg.webp"
+            src="/others/hero_bg_desktop.webp"
             alt="3D Model"
-            width={4000}
-            height={4000}
+            width={5000}
+            height={5000}
             priority={true}
             className="object-cover z-0  w-full  hidden lg:block
             lg:h-190
             xl:h-225
+            2xl:h-240
             "
           />
       <Image

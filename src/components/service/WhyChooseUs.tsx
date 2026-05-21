@@ -41,7 +41,7 @@ export default function WhyChooseUs() {
               <div className="relative">
                 <div className="relative z-10 px-3 lg:px-1">
                   <img
-                    src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80"
+                    src="others/fortuner_car.webp"
                     alt="Car"
                     className="w-full h-120 object-cover rounded-lg "
                   />

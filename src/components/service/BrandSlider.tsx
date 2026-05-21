@@ -5,7 +5,7 @@ import { useState, useRef } from 'react';
 import { motion, useMotionValue, useAnimationFrame, animate } from 'motion/react';
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { brands, BrandType } from "@/lib/data/constant";
-import Heading from "../myComponents/Heading";
+import Heading from "@/components/myComponents/Heading";
 
 function BrandCard({name, image}:BrandType) {
   return (

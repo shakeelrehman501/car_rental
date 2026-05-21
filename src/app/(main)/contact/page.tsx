@@ -83,15 +83,15 @@ function Contact() {
         draggable
       />
 
-      <div className="relative h-[200px] md:h-[300px] lg:h-[400px] w-full">
+      <div className="relative h-[200px] md:h-[300px] lg:h-[600px] w-full">
         <img
-          src="/others/aboutux_img.webp"
+          src="/others/contactus.webp"
           alt="City Skyline"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider">
-            
+            Contact Us
           </h1>
         </div>
       </div>

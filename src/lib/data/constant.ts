@@ -20,52 +20,27 @@ export interface BrandType {
 
 export const brands:BrandType[] = [
   {
-    name: "Acura",
+    name: "Toyota",
     image:
-      "/others/parado.png",
+      "/others/toyotaLogo.webp",
   },
   {
-    name: "Ford",
+    name: "Fortuner",
     image:
-      "/others/parado.png",
+      "/others/fortunerLogo.webp",
   },
   {
     name: "Bentley",
     image:
-      "/others/parado.png",
+      "/others/toyotaLogo.webp",
   },
   {
     name: "Chevrolet",
     image:
-      "/others/parado.png",
+      "/others/fortunerLogo.webp",
   },
   {
     name: "Ferrari",
-    image:
-      "/others/parado.png",
-  },
-  {
-    name: "Mercedes",
-    image:
-      "/others/parado.png",
-  },
-  {
-    name: "Ferrari_1",
-    image:
-      "/others/parado.png",
-  },
-  {
-    name: "Mercedes_1",
-    image:
-      "/others/parado.png",
-  },
-  {
-    name: "Ferrari_2",
-    image:
-      "/others/parado.png",
-  },
-  {
-    name: "Mercedes_2",
     image:
       "/others/parado.png",
   },
@@ -225,8 +200,6 @@ export const contactCardData:ContactCardType[] = [
     data:"153-H, Commercial Zone, Phase 1, DHA Lahore Cantt, Lahore"
   },
 ]
-
-
 export interface AboutCardType {
   icon:IconType;
   title:string;
